@@ -1,6 +1,7 @@
 package com.example.applista;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,15 +11,29 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    listView listViewLivros;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        String[] livros = {
+                "Dom Casmurro - Machado de Assis",
+                "O Cortiço - Aluísio Azevedo",
+                "Memórias Póstumas de Brás Cubas - Machado de Assis",
+                "Capitães da Areia - Jorge Amado",
+                "Grande Sertão: Veredas - Guimarães Rosa",
+                "Dom Casmurro - Machado de Assis",
+                "O Cortiço - Aluísio Azevedo",
+                "Memórias Póstumas de Brás Cubas - Machado de Assis",
+                "Capitães da Areia - Jorge Amado",
+                "Grande Sertão: Veredas - Guimarães Rosa",
+        };
+
+        listViewLivros = findViewById(R.id.listViewLivros);
+
     }
 }
