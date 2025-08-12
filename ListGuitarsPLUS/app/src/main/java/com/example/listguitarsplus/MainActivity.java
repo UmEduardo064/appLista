@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         guitars.add(new GuitarItem("Les Paul", R.drawable.les_paul, "A Les Paul tem som encorpado e sustain longo, ótima para rock e blues."));
         guitars.add(new GuitarItem("Warlock", R.drawable.warlock, "A Warlock possui um design agressivo e angular, muito popular no heavy metal. Seu som é potente e distorcido, ideal para riffs pesados e solos rápidos."));
         guitars.add(new GuitarItem("Flying V", R.drawable.flying_v, "A Flying V tem um formato em 'V' icônico, criado para chamar atenção. Seu som é equilibrado entre agudos e graves, perfeita para rock clássico e metal."));
+        guitars.add(new GuitarItem("Iceman", R.drawable.iceman, "A Iceman é famosa por seu timbre potente e definido, perfeita para metal e rock pesado. Seu corpo maciço proporciona ótimo sustain, enquanto suas pickups de alta saída entregam distorção agressiva e clareza mesmo em afinações baixas."));
 
         CustomAdapter adapter = new CustomAdapter(this, guitars);
         listOfGuitars.setAdapter(adapter);
