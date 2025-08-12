@@ -1,17 +1,15 @@
 package com.example.applista;
 
 import android.os.Bundle;
-import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    listView listViewLivros;
+    ListView ListViewLivros;
 
 
     @Override
@@ -33,7 +31,16 @@ public class MainActivity extends AppCompatActivity {
                 "Grande Sertão: Veredas - Guimarães Rosa",
         };
 
-        listViewLivros = findViewById(R.id.listViewLivros);
+        ListViewLivros = findViewById(R.id.listViewLivros);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+                this,
+                R.layout.activity_list_item_livro,
+                R.id.textViewLivro,
+                livros
+        );
+
+        ListViewLivros.setAdapter(adapter);
 
     }
 }
